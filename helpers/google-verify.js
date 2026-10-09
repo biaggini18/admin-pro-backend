@@ -8,11 +8,6 @@ async function googleVerify(token) {
       //[WEB_CLIENT_ID_1, WEB_CLIENT_ID_2, WEB_CLIENT_ID_3]
   });
   const payload = ticket.getPayload();
-  // This ID is unique to each Google Account, making it suitable for use as a primary key
-  // during account lookup. Email is not a good choice because it can be changed by the user.
-  console.log(payload)
-  // If the request specified a Google Workspace domain:
-  // const domain = payload['hd'];
   return payload;
 }
 
